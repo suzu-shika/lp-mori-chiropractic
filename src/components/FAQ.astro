@@ -1,0 +1,100 @@
+<div class="c-faq">
+  <div class="c-faq-container l-container">
+    <h2 class="c-faq-title">よくある質問</h2>
+    <div class="c-faq-list">
+      <section class="c-faq-item">
+        <h3 class="c-faq-question"><span class="c-faq-question-number">1</span>施術に痛みはありますか？</h3>
+        <p class="c-faq-ansewer">押したり揉んだり強い圧力を意識的に加えたり、<br>骨をボキボキならすようなことはしませんので、<br>安心して施術を受けていただければと思います。</p>
+      </section><!-- /.c-faq-item -->
+      <section class="c-faq-item">
+        <h3 class="c-faq-question"><span class="c-faq-question-number">2</span>施術時間はどれくらいですか？</h3>
+        <p class="c-faq-ansewer">施術時間は5～30分ほどです。<br>症状や身体の反応によって前後します。<br>初回はお話をお聞きする時間などがあるため、<br>60分ほど想定ください。</p>
+      </section><!-- /.c-faq-item -->
+      <section class="c-faq-item">
+        <h3 class="c-faq-question"><span class="c-faq-question-number">3</span>寝たきりや車いすでも施術を受けられますか？</h3>
+        <p class="c-faq-ansewer">施術可能です。<br>当院では出張施術も行っておりますので、<br>詳細はお問い合わせください。</p>
+      </section><!-- /.c-faq-item -->
+      <section class="c-faq-item">
+        <h3 class="c-faq-question"><span class="c-faq-question-number">4</span>どのくらいで効果が出ますか？</h3>
+        <p class="c-faq-ansewer">個人差があるためはっきりしたことは言えませんが、施術開始から5分で効果を感じていただいた方もいます。<br>時間をおいて効果を感じていただく方もいますが、<br>一回の施術で満足いただけるように努めています。</p>
+      </section><!-- /.c-faq-item -->
+      <section class="c-faq-item">
+        <h3 class="c-faq-question"><span class="c-faq-question-number">5</span>施術後はどのように過ごせばよいですか？</h3>
+        <p class="c-faq-ansewer">特別な制限はありません。<br>いつも通り過ごしていただいて大丈夫です。</p>
+      </section><!-- /.c-faq-item -->
+    </div><!-- /.c-faq-list -->
+  </div><!-- /.c-faq-container.l-container-->
+</div><!-- /.c-faq-item -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-faq {
+  padding: min(calc(24px * 1.5), calc(24 var(--vw-sp))) 0;
+  margin-top: min(calc(47px * 1.5), calc(47 var(--vw-sp)));
+  background-image: url(/assets/images/faq/bg-faq@2x.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include mq() {
+    padding-top: min(100px, calc(100 var(--vw-pc)));
+    padding-bottom: min(100px, calc(100 var(--vw-pc)));
+    margin-top: min(100px, calc(100 var(--vw-pc)));
+  }
+}
+
+.c-faq-title {
+  padding-left: 0.025em;
+  font-family: var(--font-family-serif);
+  font-size: min(calc(27.5px * 1.5), calc(27.5 var(--vw-sp)));
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.c-faq-list {
+  display: grid;
+  gap: min(calc(16px * 1.5), calc(16 var(--vw-sp)));
+  margin-top: min(calc(25px * 1.5), calc(25 var(--vw-sp)));
+}
+
+.c-faq-item {
+  padding: min(calc(30px * 1.5), calc(30 var(--vw-sp))) min(calc(24px * 1.5), calc(24 var(--vw-sp))) min(calc(24px * 1.5), calc(24 var(--vw-sp)));
+  background-color: var(--color-bg-white);
+
+  @include mq() {
+    padding: min(calc(30px * 1.5), calc(30 var(--vw-sp))) min(calc(30px * 1.5), calc(30 var(--vw-sp))) min(calc(24px * 1.5), calc(24 var(--vw-sp)));
+  }
+}
+
+.c-faq-question {
+  display: flex;
+  align-items: center;
+  gap: min(calc(6px * 1.5), calc(6 var(--vw-sp)));
+  font-size: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.c-faq-question-number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: min(calc(26.5px * 1.5), calc(26.5 var(--vw-sp)));
+  height: min(calc(26.5px * 1.5), calc(26.5 var(--vw-sp)));
+  border-radius: 50%;
+  background-color: #ef9634;
+  color: var(--color-font-white);
+  font-family: var(--font-family-serif);
+  font-size: min(calc(14px * 1.5), calc(14 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-faq-ansewer {
+  margin-top: min(calc(8px * 1.5), calc(8 var(--vw-sp)));
+  font-size: min(calc(12.5px * 1.5), calc(12.5 var(--vw-sp)));
+  text-align: justify;
+  font-feature-settings: "palt";
+}
+</style>

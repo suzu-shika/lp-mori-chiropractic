@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FV from '../components/FV.astro';
+import Voice from '../components/Voice.astro';
+import Worry from '../components/Worry.astro';
+import TasteDisorder from '../components/TasteDisorder.astro';
+import TrueStory from '../components/TrueStory.astro';
+import PetDog from '../components/PetDog.astro';
+import Method from '../components/Method.astro';
+import Points from '../components/Points.astro';
+import Price from '../components/Price.astro';
+import Object from '../components/Object.astro';
+import Message from '../components/Message.astro';
+import FAQ from '../components/FAQ.astro';
+import Profile from '../components/Profile.astro';
+---
+
+<Layout subTitle="犬の妙術">
+  <!-- fv -->
+  <div class="fv">
+    <FV />
+  </div><!-- /.fv -->
+
+  <main>
+    <!-- voice -->
+    <section class="voice">
+      <Voice />
+    </section><!-- /.voice -->
+
+    <section class="worry">
+      <Worry />
+    </section><!-- /.worry -->
+
+    <section class="tasteDisorder">
+      <TasteDisorder />
+    </section><!-- /.tasteDisorder -->
+
+    <section class="trueStory">
+      <TrueStory />
+    </section><!-- /.trueStory -->
+
+    <section class="petDog">
+      <PetDog />
+    </section><!-- /.petDog -->
+
+    <section class="method">
+      <Method />
+    </section><!-- /.method -->
+
+    <section class="points">
+      <Points />
+    </section><!-- /.points -->
+
+    <section class="price">
+      <Price />
+    </section><!-- /.price -->
+
+    <section class="object">
+      <Object />
+    </section><!-- /.object -->
+
+    <section class="message">
+      <Message />
+    </section><!-- /.message -->
+
+    <section class="faq">
+      <FAQ />
+    </section><!-- /.faq -->
+
+    <section class="profile">
+      <Profile />
+    </section><!-- /.profile -->
+
+  </main>
+</Layout>
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+// voice
+.voice {
+  transform: translateY(-27px);
+
+  @include mq() {
+    transform: translateY(max(-190px, calc(-190 var(--vw-pc))));
+  }
+}
+
+// worry
+.worry {
+  margin-top: calc(29 var(--vw-sp));
+
+  @include mq() {
+    margin-top: 0;
+  }
+}
+
+// tasteDisorder
+.tasteDisorder {
+  margin-top: calc(36 var(--vw-sp));
+}
+</style>

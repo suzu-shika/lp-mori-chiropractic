@@ -1,0 +1,196 @@
+<div class="c-petDog">
+  <div class="l-container">
+    <h2 class="c-petDog-title" aria-label="愛犬を救ったのはマルマルでした！">
+      <span class="c-petDog-title-top">愛犬を救ったのは</span>
+      <span class="c-petDog-title-bottom">◯◯でした！</span>
+    </h2>
+  </div><!-- /.l-container -->
+  <div class="c-petDog-content-pc">
+    <div class="l-container">
+      <div class="c-petDog-content-sp">
+        <div class="c-petDog-description">
+          <p class="c-petDog-text">私が病院での治療ではない方法を探していた頃、<br>我が家に8頭のポメラニアンがやってきました。<br>そのうちの1頭に、重度のてんかんがありました。</p>
+          <p class="c-petDog-text c-petDog-text--2nd c-petDog-text-huge">なんとかしたかった！</p>
+          <p class="c-petDog-text c-petDog-text--3rd">そのとき私は<span class="u-color-orange c-petDog-text-lg">「自分の病気の治療法が今にないなら、過去にあるのではないか」</span>と歴史を遡り、<br>あるものに出会っていました。</p>
+          <p class="c-petDog-text c-petDog-text--4th">それは、日本最古の武術であり、<br class="u-no-pc">日本の治療術の源流でした。</p>
+          <p class="c-petDog-text c-petDog-text--5th"><span class="u-color-white">「これなら<span class="c-petDog-text-lg">愛犬を助けられるかもしれない</span>」</span><span class="c-petDog-text-block">と思い、習得を決意。<br>技術は形になり、愛犬は</span><span class="c-petDog-text-xl">自分で立って<span>走れるように</span>なったのです!</span></p>
+        </div><!-- /.c-petDog-description -->
+      </div><!-- /.c-petDog-content-sp -->
+    </div><!-- /.l-container -->
+  </div><!-- /.c-petDog-content-pc -->
+</div><!-- /.c-petDog -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-petDog {
+  padding-top: min(calc(50px * 1.5), calc(50 var(--vw-sp)));
+
+  @include mq() {
+    padding-top: min(100px, calc(100 var(--vw-pc)));
+    padding-bottom: min(100px, calc(100 var(--vw-pc)));
+  }
+}
+
+.c-petDog-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: min(calc(11px * 1.5), calc(11 var(--vw-sp)));
+  max-width: 580px;
+  height: min(calc(98.5px * 1.5), calc(98.5 var(--vw-sp)));
+  padding-left: 0.05em;
+  margin: auto;
+  background-color: #eba05f;
+  color: var(--color-font-white);
+  font-family: var(--font-family-serif);
+  line-height: 1;
+  text-shadow: 0px 2px 3.5px rgb(105 85 68 / 0.4);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: min(calc(49px * 1.5), calc(49 var(--vw-sp)));
+    translate: -50%;
+    width: min(calc(60px * 1.5), calc(60 var(--vw-sp)));
+    height: min(1px, calc(1 var(--vw-sp)));
+    background-color: var(--color-bg-white);
+  }
+
+  &::before {
+    left: calc(50% - min(118px, calc(118 var(--vw-sp))));
+    left: calc(50% - min(calc(118px * 1.5), calc(118 var(--vw-sp))));
+    rotate: 66deg;
+  }
+
+  &::after {
+    left: calc(50% + min(118px, calc(118 var(--vw-sp))));
+    left: calc(50% + min(calc(118px * 1.5), calc(118 var(--vw-sp))));
+    rotate: -66deg;
+  }
+}
+
+.c-petDog-title-top {
+  font-size: min(19.5px, calc(19.5 var(--vw-sp)));
+  font-size: min(calc(19.5px * 1.5), calc(19.5 var(--vw-sp)));
+}
+
+.c-petDog-title-bottom {
+  font-size: min(calc(27.5px * 1.5), calc(27.5 var(--vw-sp)));
+}
+
+.c-petDog-content-sp {
+  position: relative;
+  padding: min(calc(18px * 1.5), calc(18 var(--vw-sp))) 0 min(calc(361px * 1.5), calc(361 var(--vw-sp)));
+  background-image: url(/assets/images/petDog/bg-petDog-check-sp@2x.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: min(calc(6px * 1.5), calc(6 var(--vw-sp)));
+    width: min(calc(261px * 1.5), calc(261 var(--vw-sp)));
+    height: min(calc(328px * 1.5), calc(328 var(--vw-sp)));
+    background-image: url(/assets/images/petDog/bg-petDog-pic-sp@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+.c-petDog-description {
+  padding: 0 min(calc(7px * 1.5), calc(7 var(--vw-sp)));
+  text-align: justify;
+}
+
+.c-petDog-text {
+  .c-petDog-text-lg {
+    font-size: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  &--2nd {
+    margin-top: min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+  }
+
+  &--3rd {
+    margin-top: min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+  }
+
+  &--4th {
+    margin-top: min(calc(8px * 1.5), calc(8 var(--vw-sp)));
+  }
+
+  &--5th {
+    .u-color-white {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      height: min(calc(30px * 1.5), calc(30 var(--vw-sp)));
+      margin-top: min(calc(6px * 1.5), calc(6 var(--vw-sp)));
+      background-color: #eba05f;
+      letter-spacing: 0.05em;
+    }
+
+    .c-petDog-text-block {
+      display: block;
+      margin-top: min(calc(13px * 1.5), calc(13 var(--vw-sp)));
+    }
+
+    .c-petDog-text-xl {
+      display: block;
+      margin-top: min(calc(11px * 1.5), calc(11 var(--vw-sp)));
+      color: var(--color-font-orange);
+      font-family: var(--font-family-serif);
+      font-size: min(calc(18px * 1.5), calc(18 var(--vw-sp)));
+      font-style: italic;
+      letter-spacing: -0.03em;
+
+      span {
+        position: relative;
+        text-decoration-color: #f7ee12;
+        text-decoration-line: underline;
+        text-decoration-thickness: min(calc(4px * 1.5), calc(4 var(--vw-sp)));
+        text-underline-offset: min(calc(5px * 1.5), calc(5 var(--vw-sp)));
+        text-decoration-skip-ink: none;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+          height: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+          background-image: url(/assets/images/petDog/image-petDog-deco@2x.webp);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+        }
+
+        &::before {
+          top: max(calc(-10px * 1.5), calc(-10 var(--vw-sp)));
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+          bottom: max(calc(-23px * 1.5), calc(-23 var(--vw-sp)));
+        }
+      }
+    }
+  }
+}
+
+.c-petDog-text-huge {
+  color: var(--color-font-orange);
+  font-family: var(--font-family-serif);
+  font-size: min(calc(31px * 1.5), calc(31 var(--vw-sp)));
+  font-style: italic;
+}
+</style>

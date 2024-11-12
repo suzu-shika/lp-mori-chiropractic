@@ -1,0 +1,203 @@
+---
+import CTA from '../components/CTA.astro';
+---
+
+<div class="c-price">
+  <div class="c-price-container">
+    <div class="c-price-head">
+      <h2 class="c-price-title">施術料金</h2>
+      <span class="c-price-sub-title">施術料金はこちら</span>
+    </div><!-- /.c-price-head -->
+    <div class="c-price-content">
+      <div class="l-container">
+        <ul class="c-price-list">
+          <li class="c-price-item">
+            <div class="c-price-wrapper c-price-wrapper--1st">
+              <h3 class="c-price-title-level3">初回料金</h3>
+              <p class="c-price-price">
+                <span class="c-price-price-number">11,000</span><span>円</span>
+              </p>
+            </div><!-- /.c-price-wrapper -->
+            <p class="c-price-breakdown">施術料<span>9,000</span>円＋初診料<span>2,000</span>円</p>
+            <p class="c-price-notes">※高校生以下7,000円＋2,000円</p>
+          </li>
+          <li class="c-price-item">
+            <div class="c-price-wrapper c-price-wrapper--2nd">
+              <h3 class="c-price-title-level3">2回目以降料金</h3>
+              <p class="c-price-price">
+                <span class="c-price-price-number">9,000</span><span>円</span>
+              </p>
+            </div><!-- /.c-price-wrapper -->
+            <p class="c-price-notes">※高校生以下7,000円</p>
+          </li>
+        </ul>
+      </div><!-- /.l-container -->
+    </div><!-- /.c-price-content -->
+    <div class="c-price-cta">
+      <p class="c-price-cta-text">
+        <span>ただ、せっかくこのページをご覧いただいたので、<br>あなたには<span class="c-price-cta-text-strong">特別価格</span>でご提供します。</span>
+        <span>このページからご相談いただいた方限定で、<br>初診料<span class="c-price-cta-text-strong">2,000</span>円が<span class="c-price-cta-text-strong">無料！</span></span>
+        <span>あまりにご相談が多い場合、<span class="c-price-cta-text-strong">限定価格</span>は終了します。<br>今すぐ！<span class="c-price-cta-text-strong">ご相談</span>ください！</span>
+      </p>
+      <div class="c-price-cta-cta">
+        <CTA />
+      </div><!-- /.c-price-cta-cta -->
+    </div><!-- /.c-price-cta -->
+  </div><!-- /.c-price-container -->
+</div><!-- /.c-price -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-price {
+  padding-top: min(calc(49px * 1.5), calc(49 var(--vw-sp)));
+
+  @include mq() {
+    padding-top: min(100px, calc(100 var(--vw-pc)));
+    padding-bottom: min(100px, calc(100 var(--vw-pc)));
+  }
+}
+
+.c-price-head {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  gap: min(calc(10px * 1.5), calc(10 var(--vw-sp)));
+  padding-bottom: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+  line-height: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    width: min(calc(175px * 1.5), calc(175 var(--vw-sp)));
+    height: min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+    background-image: linear-gradient(0deg, #f09f01 0%, #ffe59c 100%);
+  }
+}
+
+.c-price-title {
+  padding-left: 0.025em;
+  color: var(--color-font-orange);
+  font-family: var(--font-family-serif);
+  font-size: min(calc(27.5px * 1.5), calc(27.5 var(--vw-sp)));
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.c-price-sub-title {
+  padding-left: 0.05em;
+}
+
+.c-price-content {
+  padding: min(calc(18px * 1.5), calc(18 var(--vw-sp))) 0;
+  margin-top: min(calc(35px * 1.5), calc(35 var(--vw-sp)));
+  background-color: var(--color-bg-beige);
+  font-family: var(--font-family-serif);
+}
+
+.c-price-list {
+  display: grid;
+  gap: 12px;
+  gap: min(calc(12px * 1.5), calc(12 var(--vw-sp)));
+  padding: min(calc(30px * 1.5), calc(30 var(--vw-sp))) min(calc(16.5px * 1.5), calc(16.5 var(--vw-sp))) min(calc(34px * 1.5), calc(34 var(--vw-sp)));
+  background-color: var(--color-bg-white);
+  font-weight: 700;
+  line-height: 1;
+
+  @include mq() {
+    gap: min(calc(24px * 1.5), calc(24 var(--vw-sp)));
+    padding: min(calc(30px * 1.5), calc(30 var(--vw-sp))) min(calc(45px * 1.5), calc(45 var(--vw-sp))) min(calc(34px * 1.5), calc(34 var(--vw-sp)));
+  }
+}
+
+.c-price-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: min(calc(6px * 1.5), calc(6 var(--vw-sp)));
+  border-bottom: 2px solid #f9e5d7;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: max(calc(-2px * 1.5), calc(-2 var(--vw-sp)));
+    left: 0;
+    height: min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+    background-color: #ee7c17;
+  }
+
+  &--1st::after {
+    width: min(calc(57px * 1.5), calc(57 var(--vw-sp)));
+  }
+
+  &--2nd::after {
+    width: min(calc(94px * 1.5), calc(94 var(--vw-sp)));
+  }
+}
+
+.c-price-title-level3 {
+  margin-top: min(calc(4px * 1.5), calc(4 var(--vw-sp)));
+}
+
+.c-price-price {
+  display: flex;
+  align-items: center;
+  gap: min(calc(4px * 1.5), calc(4 var(--vw-sp)));
+}
+
+.c-price-price-number {
+  color: var(--color-font-orange);
+  font-size: min(calc(23px * 1.5), calc(23 var(--vw-sp)));
+  font-style: italic;
+}
+
+.c-price-breakdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.05em;
+  margin-top: min(calc(18.5px * 1.5), calc(18.5 var(--vw-sp)));
+  height: min(calc(45px * 1.5), calc(45 var(--vw-sp)));
+  border-radius: min(calc(7.5px * 1.5), calc(7.5 var(--vw-sp)));
+  border: 1px solid currentColor;
+  font-size: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+
+  span {
+    margin: 0 min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+    font-style: italic;
+  }
+}
+
+.c-price-notes {
+  margin-top: min(calc(6px * 1.5), calc(6 var(--vw-sp)));
+  font-weight: 400;
+
+  .c-price-item:last-child & {
+    margin-top: min(calc(17px * 1.5), calc(17 var(--vw-sp)));
+  }
+}
+
+.c-price-cta {
+  padding: min(calc(29px * 1.5), calc(29 var(--vw-sp))) 0 min(calc(44px * 1.5), calc(44 var(--vw-sp)));
+}
+
+.c-price-cta-text {
+  display: grid;
+  gap: min(calc(7.5px * 1.5), calc(7.5 var(--vw-sp)));
+  text-align: center;
+}
+
+.c-price-cta-text-strong {
+  color: var(--color-font-orange);
+  font-size: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-price-cta-cta {
+  margin-top: min(calc(32px * 1.5), calc(32 var(--vw-sp)));
+}
+</style>

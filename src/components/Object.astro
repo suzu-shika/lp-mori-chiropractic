@@ -1,0 +1,111 @@
+<div class="l-container">
+  <div class="c-object">
+    <div class="c-object-container">
+      <span class="c-object-speech-bubble">ご家族にも！
+      </span>
+      <h2 class="c-object-title">こんな方のための施術です</h2>
+      <ul class="c-object-list">
+        <li class="c-object-item">においを気にせず生活したい</li>
+        <li class="c-object-item">においを感じて食事を楽しみたい</li>
+        <li class="c-object-item">においを感じて外出を楽しみたい</li>
+        <li class="c-object-item">「治らないかもしれない」という不安から<br>解放されたい</li>
+        <li class="c-object-item">においを気にせず幸せな毎日を送りたい</li>
+        <li class="c-object-item">原因が分からない症状に悩んでいる</li>
+        <li class="c-object-item">ずっと体調が悪いけど、どこが悪いのか<br>分からない</li>
+        <li class="c-object-item">いろいろな治療をしたけど症状が改善しない</li>
+        <li class="c-object-item">鍼灸は痛いから行きたくない</li>
+        <li class="c-object-item">整体は怖いから行きたくない</li>
+      </ul>
+    </div><!-- /.c-object-container -->
+  </div><!-- /.c-object -->
+</div><!-- /.l-container -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-object {
+  padding: min(calc(20px * 1.5), calc(20 var(--vw-sp))) 0 min(calc(22px * 1.5), calc(22 var(--vw-sp)));
+  background-color: var(--color-bg-beige);
+
+  @include mq() {
+    margin-top: min(40px, calc(40 var(--vw-pc)));
+  }
+}
+
+.c-object-speech-bubble,
+.c-object-title {
+  padding-left: 0.025em;
+  font-family: var(--font-family-serif);
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.c-object-speech-bubble {
+  position: relative;
+  display: block;
+  color: var(--color-font-orange);
+  font-size: min(calc(17px * 1.5), calc(17 var(--vw-sp)));
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: max(calc(-20px * 1.5), calc(-20 var(--vw-sp)));
+    left: 50%;
+    translate: -50%;
+    width: min(calc(152px * 1.5), calc(152 var(--vw-sp)));
+    height: min(calc(29.5px * 1.5), calc(29.5 var(--vw-sp)));
+    background-image: url(/assets/images/object/deco-object-speech-bubble@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+.c-object-title {
+  position: relative;
+  margin-top: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+  font-size: min(calc(25.5px * 1.5), calc(25.5 var(--vw-sp)));
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: max(calc(-5px * 1.5), calc(-5 var(--vw-sp)));
+    left: calc(50% + min(calc(98px * 1.5), calc(98 var(--vw-sp))));
+    translate: -50%;
+    width: min(calc(103.5px * 1.5), calc(103.5 var(--vw-sp)));
+    height: min(calc(12px * 1.5), calc(12 var(--vw-sp)));
+    background-image: url(/assets/images/object/deco-object-underline@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+.c-object-list {
+  padding: 0 min(calc(17px * 1.5), calc(17 var(--vw-sp))) 0 min(calc(20px * 1.5), calc(20 var(--vw-sp)));
+  margin-top: min(calc(26px * 1.5), calc(26 var(--vw-sp)));
+
+  @include mq() {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.c-object-item {
+  display: flex;
+  align-items: center;
+  gap: min(calc(8px * 1.5), calc(8 var(--vw-sp)));
+
+  &::before {
+    content: "";
+    width: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+    height: min(calc(12.5px * 1.5), calc(12.5 var(--vw-sp)));
+    background-image: url(/assets/images/object/icon-object-check@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+</style>

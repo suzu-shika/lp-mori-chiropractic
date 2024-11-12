@@ -1,0 +1,164 @@
+---
+import CTA from './CTA.astro';
+---
+
+<div class="c-fv">
+  <div class="c-fv-container">
+    <h1 class="c-fv-heading">
+      <picture>
+      <source media="(max-width: 767px)" srcset="/assets/images/fv/text-fv-h1-sp@2x.webp">
+      <source media="(min-width: 768px)" srcset="/assets/images/fv/text-fv-h1-pc@2x.webp">
+      <img src="/assets/images/fv/text-fv-h1-sp@2x.webp" alt="「もう一生、嗅覚が戻らないのでは」と悩んでいる方へ 嗅覚を取り戻して、いつもの幸せな日常へ" loading="eager" decoding="async" width="375" height="75">
+      </picture>
+    </h1>
+    <p class="c-fv-lead">
+      <picture>
+      <source media="(max-width: 767px)" srcset="/assets/images/fv/text-fv-catch-sp@2x.webp">
+      <source media="(min-width: 768px)" srcset="/assets/images/fv/text-fv-catch-pc@2x.webp">
+      <img src="/assets/images/fv/text-fv-catch-sp@2x.webp" alt="体内の水を整えてあなたを嗅覚障害から解放します" loading="eager" decoding="async" width="291" height="86">
+      </picture>
+    </p>
+    <ul class="c-fv-list">
+      <li class="c-fv-item">
+        <span><span class="c-fv-item-orange">痛く</span>ない</span>
+      </li>
+      <li class="c-fv-item">
+        <sapn><span class="c-fv-item-orange">怖く</span>ない</sapn>
+      </li>
+      <li class="c-fv-item">
+        <span>
+          <span><span class="c-fv-item-orange">子供</span>にも</span>
+          <span class="c-fv-item-lg">施術可能</span>
+        </span>
+      </li>
+    </ul>
+  </div><!-- /.c-fv-container -->
+  <div class="c-fv-cta">
+    <CTA />
+  </div><!-- /.c-fv-cta -->
+</div><!-- /.c-fv -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-fv {
+}
+
+.c-fv-container {
+  width: 100%;
+  height: calc(564 var(--vw-sp));
+  margin-top: calc(43.5 var(--vw-sp));
+  background-image: url(/assets/images/fv/bg-fv-sp@2x.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+
+  @include mq() {
+    height: calc(1200 var(--vw-pc));
+    margin: 0;
+    background-image: url(/assets/images/fv/bg-fv-pc-new@2x.webp);
+  }
+}
+
+.c-fv-heading {
+  transform: translateY(calc(-43.5 var(--vw-sp)));
+
+  @include mq() {
+    transform: none;
+  }
+}
+
+.c-fv-lead {
+  width: calc(291 var(--vw-sp));
+  margin: calc(178.5 var(--vw-sp)) 0 0 calc(10 var(--vw-sp));
+
+  @include mq() {
+    width: calc(570 var(--vw-pc));
+    margin: calc(197 var(--vw-pc)) 0 0 calc(238 var(--vw-pc));
+  }
+}
+
+.c-fv-list {
+  display: flex;
+  gap: calc(16 var(--vw-sp));
+  margin: calc(17 var(--vw-sp)) 0 0 calc(15 var(--vw-sp));
+
+  @include mq() {
+    gap: calc(18 var(--vw-pc));
+    margin: calc(29 var(--vw-pc)) 0 0 calc(240 var(--vw-pc));
+  }
+}
+
+.c-fv-item {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: calc(105 var(--vw-sp));
+  height: calc(105 var(--vw-sp));
+  border-radius: 50%;
+  border: 1px solid #ee7c17;
+  background-color: var(--color-bg-white);
+  font-size: calc(17.5 var(--vw-sp));
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1;
+
+  &:last-child > span {
+    display: flex;
+    flex-direction: column;
+    gap: calc(4 var(--vw-sp));
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(95 var(--vw-sp));
+    height: calc(95 var(--vw-sp));
+    border-radius: 50%;
+    border: 1px dotted #ee7c17;
+  }
+
+  @include mq() {
+    width: calc(175 var(--vw-pc));
+    height: calc(175 var(--vw-pc));
+    font-size: calc(30 var(--vw-pc));
+
+    &:last-child > span {
+      gap: calc(11 var(--vw-pc));
+    }
+
+    &::before {
+      content: "";
+      width: calc(158.5 var(--vw-pc));
+      height: calc(158.5 var(--vw-pc));
+    }
+  }
+}
+
+.c-fv-item-orange {
+  color: var(--color-font-orange);
+  font-size: calc(20.5 var(--vw-sp));
+
+  @include mq() {
+    font-size: calc(35 var(--vw-pc));
+  }
+}
+
+.c-fv-item-lg {
+  @include mq() {
+    font-size: calc(32.5 var(--vw-pc));
+  }
+}
+
+.c-fv-cta {
+  transform: translateY(calc(-80 var(--vw-sp)));
+
+  @include mq() {
+    transform: translateY(calc(-237 var(--vw-pc)));
+    transform: translateY(calc(-355 var(--vw-pc)));
+  }
+}
+</style>

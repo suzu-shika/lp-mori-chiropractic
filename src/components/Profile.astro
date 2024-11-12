@@ -1,0 +1,238 @@
+<div class="c-profile">
+  <h2 class="c-profile-title">プロフィール</h2>
+  <div class="c-profile-container">
+    <div class="l-container">
+      <div class="c-profile-content">
+        <div class="c-profile-image">
+          <img src="/assets/images/profile/pic-profile@2x.webp" alt="2匹の愛犬を抱いた森大樹" loading="lazy" decoding="async" width="229" height="316">
+        </div><!-- /.c-profile-image -->
+        <h3 class="c-profile-name">森 大樹</h3>
+        <div class="c-profile-description">
+          <p class="c-profile-text">仙台生まれ東京育ち。</p>
+          <p class="c-profile-text">17歳のときに<br>「<span class="c-profile-text-cyan">うまく歩けない</span>」「<span class="c-profile-text-cyan">体がうまく起こせない</span>」<br>という<span class="c-profile-text-cyan">原因不明の症状</span>に悩まされる。</p>
+          <p class="c-profile-text">数年が経っても症状は改善せず、入退院をくり返したが、その経験をきっかけに、現代医学以外の治療法を探し始める。<br>その中で、<span class="c-profile-text-orange">日本の治療術の源流</span>と出会う。</p>
+          <p class="c-profile-text">現在、病気は完治し、不調で悩む方々に<br><span class="c-profile-text-orange">笑顔を取り戻して</span>もらうために力を注いでいます。</p>
+        </div><!-- /.c-profile-description -->
+        <div class="c-profile-info">
+          <div class="c-profile-info-inner">
+            <div class="c-profile-info-head">
+              <h3 class="c-profile-info-title" aria-label="インフォメーション">information</h3>
+            </div><!-- /.c-profile-info-head -->
+            <ul class="c-profile-info-list">
+              <li class="c-profile-info-item">
+                <span class="c-profile-info-place">施術場所 ： 東京都品川区旗の台2丁目<br><span>(旗の台駅・東口より徒歩7分/中延駅より徒歩12分)</span></span>
+                <span class="c-profile-info-place-notes">※ご予約確定後に、詳しい住所をお伝えします。<br>※近隣にコインパーキングもございます。</span>
+              </li>
+              <li class="c-profile-info-item">
+                <span class="c-profile-info-hours">営業時間 ： 10:00～20:00</span>
+                <span class="c-profile-info-hours">定休日 ： 不定休</span>
+                <span class="c-profile-info-hours-notes">※完全予約制</span>
+              </li>
+              <li class="c-profile-info-item">
+                <span class="c-profile-info-payment-title">お支払いについて</span>
+                <span class="c-profile-info-payment-text">お支払いは、初回のみ銀行振り込みでお願いいたします。<br>お振込みは、施術日程の確定から1週間以内、もしくは前日までにお願いしています。</span>
+              </li>
+            </ul>
+          </div><!-- /.c-profile-info-inner -->
+        </div><!-- /.c-profile-info -->
+        <div class="c-profile-cta">
+          <div class="c-cta">
+            <p class="c-cta-text">
+              <span class="c-cta-text-top">この<span class="c-cta-text-en">LP</span>を見た方限定</span>
+              <span class="c-cta-text-bottom">初診料<span class="c-cta-text-num">2,000</span><span class="c-cta-text-sm">円</span><span class="c-cta-text-orange">無料</span></span>
+            </p>
+            <a href="https://line.me/R/ti/p/%40750ukexu" target="_blank" class="c-cta-btn">
+              <span>いますぐ</span><span class="c-cta-btn-lg">相談</span><span>する</span><sapn class="c-cta-btn-arrow"></sapn>
+            </a>
+          </div><!-- /.c-cta -->
+        </div><!-- /.c-profile-cta -->
+      </div><!-- /.c-profile-content -->
+    </div><!-- /.l-container -->
+  </div><!-- /.c-profile-container -->
+</div><!-- /.c-profile -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-profile {
+  margin-top: min(calc(50px * 1.5), calc(50 var(--vw-sp)));
+
+  @include mq() {
+    margin-top: min(160px, calc(160 var(--vw-pc)));
+  }
+}
+
+.c-profile-title {
+  display: grid;
+  place-items: center;
+  height: min(calc(68px * 1.5), calc(68 var(--vw-sp)));
+  padding-left: 0.05em;
+  background-image: linear-gradient(0deg, #f09f01 0%, #ffe59c 100%);
+  font-family: var(--font-family-serif);
+  font-size: min(calc(27.5px * 1.5), calc(27.5 var(--vw-sp)));
+}
+
+.c-profile-container {
+  padding: min(calc(15.5px * 1.5), calc(15.5 var(--vw-sp))) 0;
+  margin-top: min(calc(36.5px * 1.5), calc(36.5 var(--vw-sp)));
+  background-color: var(--color-bg-beige);
+
+  @include mq() {
+    padding-top: min(80px, calc(80 var(--vw-pc)));
+    padding-bottom: min(80px, calc(80 var(--vw-pc)));
+  }
+}
+
+.c-profile-content {
+  // padding: 36px 13px 18px;
+  padding: min(calc(36px * 1.5), calc(36 var(--vw-sp))) min(calc(13px * 1.5), calc(13 var(--vw-sp))) min(calc(18px * 1.5), calc(18 var(--vw-sp)));
+  background-color: var(--color-bg-white);
+
+  @include mq() {
+    padding: min(calc(36px * 1.5), calc(36 var(--vw-sp))) min(calc(45px * 1.5), calc(45 var(--vw-sp))) min(calc(18px * 1.5), calc(18 var(--vw-sp)));
+  }
+}
+
+.c-profile-image {
+  text-align: center;
+
+  img {
+    // width: 229px;
+    width: min(calc(229px * 1.5), calc(229 var(--vw-sp)));
+  }
+}
+
+.c-profile-name {
+  // margin-top: 22px;
+  margin-top: min(calc(22px * 1.5), calc(22 var(--vw-sp)));
+  // font-size: 15px;
+  font-size: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-profile-description {
+  line-height: 1.6;
+}
+
+.c-profile-text {
+  margin-top: 0.9em;
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+.c-profile-text-cyan {
+  color: var(--color-font-cyan);
+  font-size: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-profile-text-orange {
+  color: var(--color-font-orange);
+  font-size: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-profile-info {
+  padding: min(calc(1px * 1.5), calc(1 var(--vw-sp)));
+  margin-top: min(calc(50px * 1.5), calc(50 var(--vw-sp)));
+  background-image: linear-gradient(0deg, #f09f01 0%, #ffe59c 100%);
+  box-shadow: 0 1px 4.5px 0.5px rgb(170 140 116 / 0.35);
+}
+
+.c-profile-info-inner {
+  position: relative;
+  padding: min(calc(17px * 1.5), calc(17 var(--vw-sp))) min(calc(7px * 1.5), calc(7 var(--vw-sp))) min(calc(19px * 1.5), calc(19 var(--vw-sp)));
+  background-color: var(--color-bg-white);
+
+  @include mq() {
+    padding: min(calc(20px * 1.5), calc(20 var(--vw-sp)));
+  }
+}
+
+.c-profile-info-head {
+  position: absolute;
+  top: max(calc(-30px * 1.5), calc(-30 var(--vw-sp)));
+  left: 50%;
+  translate: -50%;
+  display: grid;
+  justify-content: center;
+  width: min(calc(197.5px * 1.5), calc(197.5 var(--vw-sp)));
+  height: min(calc(41px * 1.5), calc(41 var(--vw-sp)));
+  padding-top: min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+  margin: auto;
+  background-image: url(/assets/images/profile/bg-profile-ribon@2x.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.c-profile-info-title {
+  color: var(--color-font-white);
+  font-family: var(--font-family-serif);
+  font-size: 19px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0 1px 4px rgb(170 140 116 / 0.8);
+}
+
+.c-profile-info-list {
+  display: grid;
+  gap: min(calc(8px * 1.5), calc(8 var(--vw-sp)));
+  font-size: min(calc(12.5px * 1.5), calc(12.5 var(--vw-sp)));
+  font-feature-settings: "palt";
+}
+
+.c-profile-info-item {
+  display: grid;
+  line-height: 1.2;
+
+  &:nth-child(1) {
+    gap: min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+  }
+
+  &:nth-child(3) {
+    margin-top: min(calc(11px * 1.5), calc(11 var(--vw-sp)));
+  }
+}
+
+.c-profile-info-place {
+  font-weight: 700;
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.c-profile-info-place-notes {
+  line-height: 1.7;
+}
+
+.c-profile-info-hours {
+  margin-top: min(calc(4px * 1.5), calc(4 var(--vw-sp)));
+}
+
+.c-profile-info-hours-notes {
+  margin-top: min(calc(3px * 1.5), calc(3 var(--vw-sp)));
+  font-size: min(calc(11px * 1.5), calc(11 var(--vw-sp)));
+}
+
+.c-profile-info-payment-title {
+  color: var(--color-font-orange);
+}
+
+.c-profile-info-payment-text {
+  margin-top: min(calc(4px * 1.5), calc(4 var(--vw-sp)));
+  line-height: 1.45;
+}
+
+.c-profile-cta {
+  margin-top: min(calc(25px * 1.5), calc(25 var(--vw-sp)));
+}
+
+.c-cta-btn {
+  width: 100%;
+}
+</style>

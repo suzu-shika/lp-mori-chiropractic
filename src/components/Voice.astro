@@ -1,0 +1,125 @@
+<div class="c-voice">
+  <div class="c-voice-container">
+    <h2 class="c-voice-title">お客様のお声</h2>
+    <p class="c-voice-lead">
+      <span>「鼻の通り</span><span class="c-voice-lead-sm">が</span><span>よくなった！」</span>
+    </p>
+    <div class="l-container">
+      <ul class="c-voice-list">
+        <li class="c-voice-item">
+          <iframe width="344" height="217" src="https://www.youtube.com/embed/qmVOLzzlsQY?si=GvxZQi6CXfvKEvK9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </li>
+        <li class="c-voice-item">
+          <iframe width="344" height="217" src="https://www.youtube.com/embed/JRqkdKQYJuI?si=9lbwA4KMOyx_ACR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </li>
+      </ul>
+      <p class="c-voice-notes">※症状の改善には個人差があります。</p>
+    </div><!-- /.l-container -->
+  </div><!-- /.c-voice-container -->
+</div><!-- /.c-voice -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-voice {
+  padding: min(calc(25px * 1.5), calc(25 var(--vw-sp))) 0 min(calc(20px * 1.5), calc(20 var(--vw-sp)));
+  background-color: var(--color-bg-beige);
+  font-family: var(--font-family-serif);
+  text-align: center;
+
+  @include mq() {
+    padding-top: min(100px, calc(100 var(--vw-pc)));
+    padding-bottom: min(100px, calc(100 var(--vw-pc)));
+  }
+}
+
+.c-voice-title {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(calc(141px * 1.5), calc(141 var(--vw-sp)));
+  height: min(calc(30.5px * 1.5), calc(30.5 var(--vw-sp)));
+  border-radius: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+  border: 1px solid #49382b;
+  margin: auto;
+  font-size: min(calc(17px * 1.5), calc(17 var(--vw-sp)));
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    bottom: -2px;
+    left: 50%;
+    width: min(calc(24px * 1.5), calc(24 var(--vw-sp)));
+    height: min(calc(3px * 1.5), calc(3 var(--vw-sp)));
+    background-color: #fbeee5;
+  }
+
+  &::after {
+    bottom: max(calc(-7px * 1.5), calc(-7 var(--vw-sp)));
+    right: min(calc(43px * 1.5), calc(42.5 var(--vw-sp)));
+    rotate: -45deg;
+    width: min(calc(17px * 1.5), calc(17 var(--vw-sp)));
+    height: 1px;
+    background-color: #49382b;
+  }
+}
+
+.c-voice-lead {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding-left: 0.05em;
+  margin: min(calc(17px * 1.5), calc(17 var(--vw-sp))) auto 0;
+  font-size: min(calc(27px * 1.5), calc(27 var(--vw-sp)));
+  text-shadow: 0 1px 5.5px rgb(177 145 122 / 0.75);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: max(calc(-33px * 1.5), calc(-33 var(--vw-sp)));
+    right: min(calc(14px * 1.5), calc(14 var(--vw-sp)));
+    width: min(calc(204.5px * 1.5), calc(204.5 var(--vw-sp)));
+    height: min(calc(24px * 1.5), calc(24 var(--vw-sp)));
+    background-image: url(/assets/images/voice/image-voice-deco@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+.c-voice-lead-sm {
+  font-size: min(calc(17.5px * 1.5), calc(17.5 var(--vw-sp)));
+}
+
+.c-voice-list {
+  display: grid;
+  gap: min(calc(23.5px * 1.5), calc(23.5 var(--vw-sp)));
+  max-width: 600px;
+  margin: min(calc(51px * 1.5), calc(51 var(--vw-sp))) auto 0;
+}
+
+.c-voice-item {
+  display: grid;
+  place-items: center;
+  background-color: #777;
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 344 / 217;
+  }
+}
+
+.c-voice-notes {
+  padding-left: 0.05em;
+  margin-top: min(calc(18px * 1.5), calc(18 var(--vw-sp)));
+  font-family: var(--font-family-base);
+  font-size: min(15px, calc(15 var(--vw-sp)));
+  font-size: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+}
+</style>

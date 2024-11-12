@@ -1,0 +1,363 @@
+<div class="c-worry">
+  <div class="c-worry-upper">
+    <div class="c-worry-upper-container l-container">
+      <h2 class="c-worry-titel">
+        <span class="c-worry-title-top">あなたには、</span>
+        <span class="c-worry-title-bottom">
+          <span>こんな<span class="c-worry-titel-yellow">お悩み</span></span><span class="c-worry-titel-sm">が</span><span class="c-worry-titel-md">ありませんか？</span>
+        </span>
+      </h2>
+      <p class="c-worry-lead">あなたがこのページをご覧になっているということは、<br>こんな悩みがあるのではないでしょうか。</p>
+      <ul class="c-worry-list">
+        <li class="c-worry-item">においを感じないから食事がおいしくない</li>
+        <li class="c-worry-item">どこにいても同じにおいがして何をしていても<br>楽しくない</li>
+        <li class="c-worry-item">においがしないことが常に気になる</li>
+        <li class="c-worry-item">「一生治らないかもしれない」という不安や<br> 喪失感がある</li>
+      </ul>
+    </div><!-- /.l-container -->
+  </div><!-- /.c-worry-upper -->
+  <div class="c-worry-lower">
+    <div class="c-worry-lower-container
+    l-container">
+      <p class="c-worry-text">
+        <span class="c-worry-text-top">だから</span>
+        <span class="c-worry-text-center">
+          <span>あなたは</span><span class="c-worry-text-sm">きっと</span>
+        </span><!-- /.c-worry-text-center -->
+        <span class="c-worry-text-list">
+          <span>嗅覚障害は一生治らない</span>
+          <span>ずっとにおいを感じずに生きていかなければ<br>ならない</span>
+        </span><!-- /.c-worry-text-list -->
+        <span class="c-worry-text-bottom">こんなふうに思っているのではありませんか？</span><!-- /.c-worry-text-bottom -->
+      </p>
+      <p class="c-worry-question">
+        <span class="c-worry-question-1st-row"><span>では、あなたが</span><span class="c-worry-question-md">におい</span><span>を</span><span class="c-worry-question-lg">感じること</span><span>は、</span></span><br>もうできないのでしょうか。
+        <span class="c-worry-question-3rd-row">このまま、諦めるしかないのでしょうか。</span>
+      </p>
+    </div><!-- /.l-container -->
+    <div class="c-worry-lower-clip-path"></div>
+  </div><!-- /.c-worry-lower -->
+  <div class="c-worry-isnsistence">
+    <p>私は、<span>「そんなことは決してない」</span><br>とお伝えしたいのです。</p>
+  </div><!-- /.c-worry-isnsistence -->
+</div><!-- /.c-worry -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-worry {
+  color: var(--color-font-white);
+
+  @include mq() {
+    padding-bottom: min(40px, calc(40 var(--vw-pc)));
+  }
+}
+
+.c-worry-upper {
+  position: relative;
+  width: 100%;
+  padding: min(calc(23px * 1.5), calc(23 var(--vw-sp))) 0 min(calc(54px * 1.5), calc(54 var(--vw-sp)));
+  background-image: url(/assets/images/worry/pic-worry-bg-sp@2x.webp);
+  background-repeat: no-repeat;
+  background-size: min(calc(375px * 1.5), calc(375 var(--vw-sp))) auto;
+  background-position: center center;
+
+  @include mq() {
+    padding-top: min(100px, calc(100 var(--vw-pc)));
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: min(calc(368px * 1.5), calc(368 var(--vw-sp)));
+    background-image: linear-gradient(0deg, rgba(40, 40, 40, 0.83), rgba(170, 170, 170, 0.83));
+
+    @include mq() {
+      height: 620px;
+    }
+  }
+}
+
+.c-worry-upper-container {
+  position: relative;
+  z-index: 1;
+}
+
+.c-worry-titel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(calc(5px * 1.5), calc(5 var(--vw-sp)));
+  width: fit-content;
+  margin: auto;
+  font-family: var(--font-family-serif);
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.c-worry-title-top {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(calc(133px * 1.5), calc(133 var(--vw-sp)));
+  height: min(calc(33.5px * 1.5), calc(33.5 var(--vw-sp)));
+  padding-left: min(calc(10px * 1.5), calc(10 var(--vw-sp)));
+  border-radius: min(calc(5px * 1.5), calc(5 var(--vw-sp)));
+  color: #3c220d;
+  font-size: min(calc(17.5px * 1.5), calc(17.5 var(--vw-sp)));
+  background-color: var(--color-bg-white);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: max(calc(-5px * 1.5), calc(-5 var(--vw-sp)));
+    left: 50%;
+    translate: -50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: min(calc(4px * 1.5), calc(4 var(--vw-sp))) solid transparent;
+    border-left: min(calc(4px * 1.5), calc(4 var(--vw-sp))) solid transparent;
+    border-top: min(calc(8px * 1.5), calc(8 var(--vw-sp))) solid #fff;
+    border-bottom: 0;
+  }
+}
+
+.c-worry-title-bottom {
+  position: relative;
+  padding-left: min(calc(20px * 1.5), calc(20 var(--vw-sp)));
+  font-size: min(calc(23px * 1.5), calc(23 var(--vw-sp)));
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: max(calc(-16px * 1.5), calc(-16 var(--vw-sp)));
+    left: min(calc(4px * 1.5), calc(4 var(--vw-sp)));
+    width: min(calc(20px * 1.5), calc(20 var(--vw-sp)));
+    height: min(calc(28.5px * 1.5), calc(28.5 var(--vw-sp)));
+    background-image: url(/assets/images/worry/image-worry-deco@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+.c-worry-titel-yellow {
+  color: var(--color-font-yellow);
+}
+
+.c-worry-titel-sm {
+  font-size: min(calc(15.5px * 1.5), calc(15.5 var(--vw-sp)));
+}
+
+.c-worry-titel-md {
+  font-size: min(calc(18.5px * 1.5), calc(18.5 var(--vw-sp)));
+}
+
+.c-worry-lead {
+  display: grid;
+  padding-left: 0.05em;
+  font-size: min(calc(12px * 1.5), calc(12 var(--vw-sp)));
+  text-align: center;
+  line-height: 1.75;
+}
+
+.c-worry-list {
+  display: grid;
+  gap: min(calc(8px * 1.5), calc(8 var(--vw-sp)));
+  width: fit-content;
+  margin: min(calc(31px * 1.5), calc(31 var(--vw-sp))) auto 0;
+  line-height: calc(38 / 27);
+}
+
+.c-worry-item {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: calc(min(calc(18.5px * 1.5), calc(18.5 var(--vw-sp))) + min(calc(9.5px * 1.5), calc(9.5 var(--vw-sp))));
+    height: min(calc(15.5px * 1.5), calc(15.5 var(--vw-sp)));
+    background-image: url(/assets/images/worry/icon-worry-check@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+  }
+}
+
+.c-worry-lower {
+  position: relative;
+  width: 100%;
+  height: min(calc(480px * 1.5), calc(480 var(--vw-sp)));
+  background-image: url(/assets/images/worry/bg-worry-lower-sp@2x.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  line-height: calc(38 / 27);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: min(calc(1px * 1.5), calc(1 var(--vw-sp)));
+    left: 0;
+    width: 100%;
+    height: min(calc(38px * 1.5), calc(38 var(--vw-sp)));
+    background-color: var(--color-bg-white);
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+  }
+}
+
+.c-worry-text {
+  transform: translateY(max(calc(-20px * 1.5), calc(-20 var(--vw-sp))));
+}
+
+.c-worry-text-top {
+  display: grid;
+  place-items: center;
+  width: min(calc(102px * 1.5), calc(102 var(--vw-sp)));
+  height: min(calc(102px * 1.5), calc(102 var(--vw-sp)));
+  padding-left: 0.05em;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 0 1px 5px 2px rgb(134 147 167 / 0.5);
+  background-color: #5372a0;
+  color: var(--color-font-white);
+  font-size: min(calc(24px * 1.5), calc(24 var(--vw-sp)));
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.c-worry-text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(calc(177.5px * 1.5), calc(177.5 var(--vw-sp)));
+  height: min(calc(40px * 1.5), calc(40 var(--vw-sp)));
+  padding-left: 0.05em;
+  margin: min(calc(16.5px * 1.5), calc(16.5 var(--vw-sp))) auto 0;
+  background-color: var(--color-bg-white);
+  color: #9d883f;
+  font-family: var(--font-family-serif);
+  font-size: min(calc(21px * 1.5), calc(21 var(--vw-sp)));
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.c-worry-text-sm {
+  font-size: min(calc(17px * 1.5), calc(17 var(--vw-sp)));
+}
+
+.c-worry-text-list {
+  display: grid;
+  gap: min(calc(9px * 1.5), calc(9 var(--vw-sp)));
+  width: fit-content;
+  margin: min(calc(36px * 1.5), calc(36 var(--vw-sp))) auto 0;
+
+  span {
+    display: flex;
+
+    &::before {
+      content: "";
+      width: calc(min(calc(19.5px * 1.5), calc(19.5 var(--vw-sp))) + min(calc(9.5px * 1.5), calc(9.5 var(--vw-sp))));
+      height: min(calc(16.5px * 1.5), calc(16.5 var(--vw-sp)));
+      margin-top: min(calc(2px * 1.5), calc(2 var(--vw-sp)));
+      background-image: url(/assets/images/worry/icon-worry-check@2x.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left center;
+    }
+  }
+}
+
+.c-worry-text-bottom {
+  display: flex;
+  justify-content: center;
+  padding-left: 0.05em;
+  margin-top: min(calc(6px * 1.5), calc(6 var(--vw-sp)));
+  color: var(--color-font-yellow);
+  font-family: var(--font-family-serif);
+  font-size: min(calc(15.5px * 1.5), calc(15.5 var(--vw-sp)));
+  font-weight: 700;
+  text-shadow: 0 1px 6px rgb(201 196 64 / 0.7);
+}
+
+.c-worry-question {
+  padding-left: 0.05em;
+  margin-top: min(calc(4px * 1.5), calc(4 var(--vw-sp)));
+  text-align: center;
+  line-height: 1.1;
+}
+
+.c-worry-question-1st-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-worry-question-md {
+  margin-bottom: min(calc(3px * 1.5), calc(3 var(--vw-sp)));
+  font-size: min(calc(20px * 1.5), calc(20 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-worry-question-lg {
+  font-size: min(calc(23.5px * 1.5), calc(23.5 var(--vw-sp)));
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.c-worry-question-3rd-row {
+  display: block;
+  margin-top: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+}
+
+.c-worry-lower-clip-path {
+  position: absolute;
+  bottom: max(calc(-1px * 1.5), calc(-1 var(--vw-sp)));
+  left: 0;
+  width: 100%;
+  height: min(calc(62px * 1.5), calc(62 var(--vw-sp)));
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: inherit;
+    background-color: var(--color-bg-white);
+  }
+
+  &::before {
+    left: 0;
+    clip-path: polygon(100% 100%, 0 0, 0 100%);
+  }
+
+  &::after {
+    right: 0;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  }
+}
+
+.c-worry-isnsistence {
+  padding-left: 0.05em;
+  margin-top: min(calc(12px * 1.5), calc(12 var(--vw-sp)));
+  color: var(--color-font-base);
+  line-height: 1.75;
+  text-align: center;
+
+  span {
+    color: var(--color-font-orange);
+    font-size: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+    font-weight: 700;
+    text-decoration-color: #f7ee12;
+    text-decoration-line: underline;
+    text-decoration-thickness: min(calc(6px * 1.5), calc(6 var(--vw-sp)));
+    text-underline-offset: max(calc(-1px * 1.5), calc(-1 var(--vw-sp)));
+    text-decoration-skip-ink: none;
+  }
+}
+</style>

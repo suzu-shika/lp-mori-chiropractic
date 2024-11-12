@@ -1,0 +1,155 @@
+---
+import CTA from '../components/CTA.astro';
+---
+
+<div class="c-message">
+  <h2 class="c-message-title">メッセージ</h2>
+  <div class="c-message-container">
+    <div class="l-container">
+      <div class="c-message-content">
+        <div class="c-message-image">
+          <img src="/assets/images/message/pic-message@2x.webp" alt="森大樹の顔写真" loading="lazy" decoding="async" width="299" height="131">
+        </div><!-- /.c-message-image -->
+        <p class="c-message-lead">ここまでご覧いただきありがとうございます。</p>
+        <div class="c-message-description">
+          <p class="c-message-text">
+            <span>森大樹と申します。<br><span class="c-message-text-orange">私がどのような想いで施術しているのか</span>について、最後にお伝えさせてください。</span>
+          </p>
+          <p class="c-message-text">
+            <span>私が<span class="c-message-text-cyan">「予後不良」</span>と診断されて闘病していたとき、お世話になっていた哲学研究家の先生にこう言われました。</span>
+            <span>「<span class="u-color-orange">病気が治ったら、<span class="c-message-text-orange">人</span>の<span class="c-message-text-orange">健康</span>に<span class="c-message-text-orange">貢献</span>する仕事につきなさい</span>」。</span>
+            <span>自分の経験を通して、健康を求める人と向き合い、その人の<span class="c-message-text-orange">幸せ</span>に<span class="c-message-text-orange">貢献する</span>のが向いていると。</span>
+            <span>そのときの先生の言葉は、今でもよく覚えています。</span>
+          </p>
+          <p class="c-message-text">
+            <span>たくさんの人を救いたいとか、周りの人を幸せにしたいとか、<br>そんな<span class="c-message-text-cyan">崇高な気持ち</span>でこの世界に入ったわけではありません。</span>
+            <span>私を本当に必要としてくれる人がいて、その人を救えるのなら・・・<br>そんな想いでこの世界に入りました。</span>
+            <span>縁があって私を<span class="c-message-text-orange">必要としてくれる</span>方々が、<br>思い描く<span class="c-message-text-orange">未来へと辿り着ける</span>よう、<br>橋渡しをしていきたい。</span>
+          </p>
+          <p class="c-message-text">
+            <span>特に、<br>家族が嗅覚障害やほかの症状で<span class="u-color-cyan u-fw-bold">苦しんでいる</span>のなら。すぐに<span class="c-message-text-orange">ご相談ください</span>。</span>
+            <span>私も闘病中、母に迷惑をかけました。<br>母は<span class="c-message-text-cyan">心配</span>で仕方なかったと思います。</span>
+            <span>私が愛犬への施術を始めたのも、<br>愛犬に<span class="c-message-text-orange">元気になって</span>ほしかったから。</span>
+            <span>私にとって愛犬は子供のような存在で、<br>愛犬に何度も救われてきました。</span>
+            <span>不調に<span class="c-message-text-cyan">苦しむ</span>ご本人はもちろん、<br>ご家族の<span class="u-color-orange u-fw-bold">笑顔を見られた</span>とき、<br>この仕事をしていて<span class="c-message-text-orange">良かった</span>と心から思います。</span>
+          </p>
+          <p class="c-message-text">
+            <span>健康に勝るものはありません。<br>一日でも早くあなたに<span class="c-message-text-orange">笑顔が戻る</span>よう、お力添えさせてください。<br><span class="c-message-text-orange">あなたから</span>のご相談をお待ちしています。</span>
+          </p>
+        </div><!-- /.c-message-description -->
+      </div><!-- /.c-message-content -->
+    </div><!-- /.l-container -->
+  </div><!-- /.c-message-container -->
+  <div class="c-message-cta">
+    <CTA />
+  </div><!-- /.c-message-cta -->
+</div><!-- /.c-message -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-message {
+  margin-top: min(calc(50px * 1.5), calc(50 var(--vw-sp)));
+
+  @include mq() {
+    margin-top: min(160px, calc(160 var(--vw-pc)));
+  }
+}
+
+.c-message-title {
+  display: grid;
+  place-items: center;
+  height: min(calc(68px * 1.5), calc(68 var(--vw-sp)));
+  padding-left: 0.05em;
+  background-image: linear-gradient(0deg, #f09f01 0%, #ffe59c 100%);
+  font-family: var(--font-family-serif);
+  font-size: min(calc(27.5px * 1.5), calc(27.5 var(--vw-sp)));
+}
+
+.c-message-container {
+  padding: min(calc(14px * 1.5), calc(14 var(--vw-sp))) 0;
+  margin-top: min(calc(32.5px * 1.5), calc(32.5 var(--vw-sp)));
+  background-color: var(--color-bg-beige);
+
+  @include mq() {
+    padding-top: min(80px, calc(80 var(--vw-pc)));
+    padding-bottom: min(80px, calc(80 var(--vw-pc)));
+  }
+}
+
+.c-message-content {
+  padding: min(calc(23.5px * 1.5), calc(23.5 var(--vw-sp))) min(calc(15px * 1.5), calc(15 var(--vw-sp))) min(calc(12px * 1.5), calc(12 var(--vw-sp)));
+  background-color: var(--color-bg-white);
+
+  @include mq() {
+    padding: min(calc(23.5px * 1.5), calc(23.5 var(--vw-sp))) min(calc(45px * 1.5), calc(45 var(--vw-sp))) min(calc(12px * 1.5), calc(12 var(--vw-sp)));
+  }
+}
+
+.c-message-image {
+  text-align: center;
+
+  img {
+    width: min(calc(299px * 1.5), calc(299 var(--vw-sp)));
+  }
+}
+
+.c-message-lead {
+  position: relative;
+  width: fit-content;
+  padding-left: 0.05em;
+  margin: min(calc(14px * 1.5), calc(14 var(--vw-sp))) auto 0;
+  font-weight: 700;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: min(calc(3px * 1.5), calc(3 var(--vw-sp)));
+    width: min(calc(16.5px * 1.5), calc(16.5 var(--vw-sp)));
+    height: min(calc(15.5px * 1.5), calc(15.5 var(--vw-sp)));
+    background-image: url(/assets/images/message/deco-message-line@2x.webp
+    );
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &::before {
+    left: max(calc(-18px * 1.5), calc(-18 var(--vw-sp)));
+  }
+
+  &:after {
+    right: max(calc(-18px * 1.5), calc(-18 var(--vw-sp)));
+    rotate: 90deg;
+  }
+}
+
+.c-message-description {
+  display: grid;
+  gap: 0.6em;
+  font-feature-settings: "palt";
+  text-align: justify;
+}
+
+.c-message-text {
+  display: grid;
+  gap: 0.8em;
+}
+
+.c-message-text-orange {
+  color: var(--color-font-orange);
+  font-size: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-message-text-cyan {
+  color: var(--color-font-cyan);
+  font-size: min(calc(14.5px * 1.5), calc(14.5 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-message-cta {
+  margin-top: min(calc(30px * 1.5), calc(30 var(--vw-sp)));
+}
+</style>

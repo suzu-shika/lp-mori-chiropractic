@@ -1,0 +1,132 @@
+<div class="c-tasteDisorder">
+  <div class="c-tasteDisorder-container l-container">
+    <h2 class="c-tasteDisorder-title">嗅覚障害と一生付き合っていきますか？</h2>
+    <div class="c-tasteDisorder-upper">
+      <p class="c-tasteDisorder-text">嗅覚障害とは、においを正確に感じられなくなる症状です。
+      </p>
+      <p class="c-tasteDisorder-text">私たちは、鼻の中にあるにおいを感知するセンサーで<span class="u-color-orange c-tasteDisorder-text-lg">「におい分子」</span>を受け取っています。
+      </p>
+      <p class="c-tasteDisorder-text">嗅覚障害は、何らかの理由でセンサーが<span class="u-color-orange c-tasteDisorder-text-lg">「におい分子」</span>を<span class="u-color-orange c-tasteDisorder-text-lg">感知</span>していない状態です。</p>
+      <p class="c-tasteDisorder-text">この<span class="u-color-orange c-tasteDisorder-text-lg">「何らかの理由」</span>が分からず、嗅覚障害が長期化してしまうことがあります。</p>
+      <p class="c-tasteDisorder-text">嗅覚障害があるだけでも苦しいのに、<br>原因が分からないとなればさらに<span class="u-color-cyan c-tasteDisorder-text-lg">苦しい</span>ですよね。</p>
+    </div><!-- /.c-tasteDisorder-upper -->
+    <div class="c-tasteDisorder-lower">
+      <p class="c-tasteDisorder-text">しかも、<br>嗅覚障害と<span class="u-color-cyan c-tasteDisorder-text-lg">一生付き合っていかなければいけない</span>としたら。<br>そんなことは考えたくもないのではないでしょうか？</p>
+      <p class="c-tasteDisorder-text">私が施術したAさん。<br>嗅覚障害で悩んでいましたが、施術後すぐに<span class="u-color-orange c-tasteDisorder-text-lg">「においを感じる気がする」</span>とおっしゃいました。</p>
+      <p class="c-tasteDisorder-text">私は3年間で<span class="u-color-orange c-tasteDisorder-text-lg">100人以上</span>に施術し、体の不調で<span class="u-color-cyan c-tasteDisorder-text-lg">ずっと悩んできた</span>方の力になってきました。</p>
+      <p class="c-tasteDisorder-text">私も一時期、健康に<span class="u-fw-bold c-tasteDisorder-text-wave">悩んでいました</span>。<br>高校3年生の10月に<span class="u-color-cyan c-tasteDisorder-text-lg">突然歩くのが難しく</span>なり、授業中も<span class="u-color-cyan c-tasteDisorder-text-lg">ふらつく</span>ようになりました。<br>最初は<span class="u-color-orange c-tasteDisorder-text-lg">「勉強し過ぎて疲れたのかな」</span>ぐらいに思っていました。</p>
+      <p class="c-tasteDisorder-text">でも、発症してから1週間ほどが経つと、ベッドから起きるのが難しくなったり、<span class="u-color-cyan c-tasteDisorder-text-lg">自分が2人いるように感じたりする</span>ようになりました。<br>近所の内科や大学病院で検査しても原因は分からず、<br>遠く離れた病院で<span class="u-color-cyan c-tasteDisorder-text-lg">精神疾患</span>と診断されました。</p>
+      <p class="c-tasteDisorder-text">その後も病院に通い続けましたが、<br>症状はなかなか改善せず入院することになりました。</p>
+    </div><!-- /.c-tasteDisorder-lower -->
+  </div><!-- /.c-tasteDisorder-container.l-container -->
+</div><!-- /.c-tasteDisorder -->
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.c-tasteDisorder {
+  position: relative;
+  padding-bottom: min(calc(45px * 1.5), calc(45 var(--vw-sp)));
+  overflow: hidden;
+
+  @include mq() {
+    padding-bottom: min(100px, calc(100 var(--vw-pc)));
+  }
+}
+
+.c-tasteDisorder-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: min(calc(94px * 1.5), calc(94 var(--vw-sp)));
+    right: max(calc(-16px * 1.5), calc(-16 var(--vw-sp)));
+    width: min(calc(151.5px * 1.5), calc(151.5 var(--vw-sp)));
+    height: min(calc(211.5px * 1.5), calc(211.5 var(--vw-sp)));
+    background-image: url(/assets/images/tasteDisorder/pic-tasteDisorder-bg-sp@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+.c-tasteDisorder-title {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: min(calc(35.5px * 1.5), calc(35.5 var(--vw-sp)));
+  padding-left: 0.08em;
+  background-color: #efc1a0;
+  color: var(--color-font-orange);
+  font-family: var(--font-family-serif);
+  font-size: min(calc(16.5px * 1.5), calc(16.5 var(--vw-sp)));
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 5px rgb(169 138 111 / 0.5);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: max(calc(-14px * 1.5), calc(-14 var(--vw-sp)));
+    left: 50%;
+    translate: -50%;
+    width: min(calc(19.5px * 1.5), calc(19.5 var(--vw-sp)));
+    height: min(calc(17px * 1.5), calc(17 var(--vw-sp)));
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    background-color: inherit;
+  }
+}
+
+.c-tasteDisorder-upper,
+.c-tasteDisorder-lower {
+  display: grid;
+  gap: 1em;
+}
+
+.c-tasteDisorder-upper {
+  margin-top: min(calc(18px * 1.5), calc(18 var(--vw-sp)));
+
+  &::after {
+    content: "";
+    width: min(calc(196px * 1.5), calc(196 var(--vw-sp)));
+    height: min(calc(82.5px * 1.5), calc(82.5 var(--vw-sp)));
+    margin: min(calc(4px * 1.5), calc(4 var(--vw-sp))) auto 0;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    background-image: linear-gradient(0deg, rgb(240,159,1) 0%, rgba(255,229,156,0) 100%);
+  }
+}
+
+.c-tasteDisorder-lower {
+  margin-top: min(calc(12px * 1.5), calc(12 var(--vw-sp)));
+}
+
+.c-tasteDisorder-text {
+  position: relative;
+  z-index: 1;
+  text-align: justify;
+}
+
+.c-tasteDisorder-text-lg {
+  font-size: min(calc(15px * 1.5), calc(15 var(--vw-sp)));
+  font-weight: 700;
+}
+
+.c-tasteDisorder-text-wave {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: max(calc(-4px * 1.5), calc(-4 var(--vw-sp)));
+    left: min(calc(1px * 1.5), calc(1 var(--vw-sp)));
+    z-index: -1;
+    width: min(calc(103.5px * 1.5), calc(103.5 var(--vw-sp)));
+    height: min(calc(10.5px * 1.5), calc(10.5 var(--vw-sp)));
+    background-image: url(/assets/images/tasteDisorder/image-tasteDisorder-deco@2x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+</style>

@@ -1,0 +1,64 @@
+---
+import "../styles/style.scss";
+
+const { subTitle } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>森さんLP｜{subTitle}</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="robots" content="noindex">
+
+    <!-- destyle.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.min.css">
+  </head>
+
+  <body>
+    <slot
+    /><!-- レイアウトファイルに特有のタグ：ここにLayout.astroの読み込み先の本文をはめ込む -->
+
+    <footer class="footer">
+      <a href="#" class="footer-link" target="_blank">プライバシーポリシー</a>
+      <div class="footer-copyright">
+        <small>Copyright(c) 2024 犬の妙術 All Rights Reserved.</small>
+      </div><!-- /.footer-copyright -->
+    </footer>
+  </body>
+</html>
+
+<style lang="scss">
+@use '../styles/_breakpoints.scss' as *;
+
+.footer {
+  padding: min(calc(2px * 1.5), calc(2 var(--vw-sp))) 0 min(calc(12px * 1.5), calc(12 var(--vw-sp))) 0.05em;
+  margin-top: min(calc(50px * 1.5), calc(50 var(--vw-sp)));
+  background-color: #eba05f;
+  color: var(--color-font-white);
+  font-size: min(calc(10px * 1.5), calc(10 var(--vw-sp)));
+  text-align: center;
+  line-height: 1;
+}
+
+.footer-link {
+  display: block;
+  width: fit-content;
+  padding: min(calc(8px * 1.5), calc(8 var(--vw-sp)));
+  margin: auto;
+}
+
+.footer-copyright {
+  small {
+    display: block;
+    font-size: min(calc(10px * 1.5), calc(10 var(--vw-sp)));
+  }
+}
+</style>
