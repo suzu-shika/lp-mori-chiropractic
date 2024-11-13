@@ -4,12 +4,30 @@ import "../styles/style.scss";
 const { subTitle } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>森さんLP｜{subTitle}</title>
+    <meta name="description" content="">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/android-chrome-256x256.png">
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://example.com/ogp.png">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:src" content="https://example.com/ogp.png">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +36,6 @@ const { subTitle } = Astro.props;
 
     <meta name="robots" content="noindex">
 
-    <!-- 背景画像のプリロード -->
     <link rel="preload" href="/assets/images/fv/bg-fv-sp@2x.webp" as="image">
     <link rel="preload" href="/assets/images/fv/bg-fv-pc@2x.webp" as="image">
 
