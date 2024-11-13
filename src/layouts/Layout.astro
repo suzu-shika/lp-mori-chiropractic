@@ -18,6 +18,10 @@ const { subTitle } = Astro.props;
 
     <meta name="robots" content="noindex">
 
+    <!-- 背景画像のプリロード -->
+    <link rel="preload" href="/assets/images/fv/bg-fv-sp@2x.webp" as="image">
+    <link rel="preload" href="/assets/images/fv/bg-fv-pc@2x.webp" as="image">
+
     <!-- destyle.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.min.css">
   </head>
